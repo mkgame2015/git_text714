@@ -50,6 +50,7 @@
       echo '<p class="error">The high score was not removed.</p>';
     }
   }
+
   else if (isset($id) && isset($name) && isset($date) && isset($score)) {
     echo '<p>Are you sure you want to delete the following high score?</p>';
     echo '<p><strong>Name: </strong>' . $name . '<br /><strong>Date: </strong>' . $date .
