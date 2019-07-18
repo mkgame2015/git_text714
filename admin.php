@@ -1,3 +1,15 @@
+<?php
+  //UserName and Password for authentication
+  $username = 'rock';
+  $password = 'roll';
+
+  if(!isset($_server['PHP_AUTH_USER']) || !isset($_server['PHP_AUTH_PW']) || ($_server['PHP_AUTH_USER']!=$username) || ($_server['PHP_AUTH_PW']!=$password)){
+    header('HTTP/1.1 401Unauthorized');
+    header('WWW-Authernticate:Basic realm="Guitar Wars"');
+    exit('<h2>GuitarWars</h2>Sorry,you must enter a valid user name and password to accese this page.');
+  }
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
